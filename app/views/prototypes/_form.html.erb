@@ -1,0 +1,11 @@
+<%= form_with(model: prototype, local: true) do |form|%>
+  <div class="field">
+    <%= form.text_field :title, placeholder:"プロトタイプの名称" %> 
+    <%= form.text_area :catch_copy, placeholder:"キャッチコピー", class: :form__text %>
+    <%= form.text_area :concept, placeholder:"コンセプト", class: :form__text %>
+    <%= form.file_field :image, placeholder:"プロトタイプの画像" %>
+  </div>
+  <div class="actions">
+    <%= form.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
